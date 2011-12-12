@@ -1,0 +1,18 @@
+Utility for bulk converting Delicious bookmark export files to RDF,
+using the following ontologies for bookmark and tag representation:
+
+	http://www.w3.org/2002/01/bookmark#
+        http://www.holygoak.co.uk/owl/redwood/0.1/tags
+
+* Usable as library for obtaining RDFLib graph represenation of a given
+  Delicious export file's contents, or as script to print out the same
+  graph to stdout (see --help option for details).
+
+* Allows output to any serialization format supported by RDFLib, with
+  default being N3.
+
+* Example usage:
+
+  delicious2rdf.py -f /path/to/delicious-export.htm -t http://example.com/ns/tags/ -o n3 (default)
+  delicious2rdf.py -f /path/to/delicious-export.htm -t http://example.com/ns/tags/ -o nt
+  delicious2rdf.py -f /path/to/delicious-export.htm -t http://example.com/ns/tags/ -o xml
